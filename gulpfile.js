@@ -54,7 +54,7 @@ function images() {
 }
 
 function sprite() {
-  return gulp.src('source/img/icon-*.svg') 
+  return gulp.src('source/img/*.svg') 
               .pipe(svgstore({
                 inlineSvg: true
                 }))

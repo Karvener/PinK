@@ -46,6 +46,9 @@ body {
   /*******************
   ******* Main *******
   ********************/
+  /*******************
+  ****** Footer ******
+  ********************/
 }
 body .page-header {
   position: relative;
@@ -63,9 +66,16 @@ body .page-header .main-nav .header-logo-menu {
   padding: 0 20px;
   position: relative;
 }
-body .page-header .main-nav .header-logo-menu .main-logo .logo-image img {
+body .page-header .main-nav .header-logo-menu .main-logo {
+  display: inline-block;
   margin-top: 22px;
   margin-bottom: 24px;
+}
+body .page-header .main-nav .header-logo-menu .main-logo .logo-pink-white-tablet {
+  display: none;
+}
+body .page-header .main-nav .header-logo-menu .main-logo .logo-pink-white-desktop {
+  display: none;
 }
 body .page-header .main-nav .header-logo-menu .menu-toggle {
   position: absolute;
@@ -624,6 +634,9 @@ body .page-main .contacts-map iframe {
   width: 100%;
   height: 100%;
 }
+body .page-footer {
+  display: none;
+}
 /***********************
 ********* 660px ********
 ***********************/
@@ -635,14 +648,23 @@ body .page-main .contacts-map iframe {
     /*******************
     **** Main 660px ****
     ********************/
+    /********************
+    **** Footer 660px****
+    ********************/
   }
   body .page-header .main-nav .header-logo-menu {
     width: auto;
     max-width: 960px;
   }
-  body .page-header .main-nav .header-logo-menu .main-logo .logo-image img {
+  body .page-header .main-nav .header-logo-menu .main-logo {
     margin-top: 27px;
     margin-bottom: 42px;
+  }
+  body .page-header .main-nav .header-logo-menu .main-logo .logo-pink-white-mobile {
+    display: none;
+  }
+  body .page-header .main-nav .header-logo-menu .main-logo .logo-pink-white-tablet {
+    display: block;
   }
   body .page-header .main-nav .header-logo-menu .menu-toggle {
     top: 45px;
@@ -843,6 +865,75 @@ body .page-main .contacts-map iframe {
   }
   body .page-main .contacts-map {
     height: 380px;
+    position: relative;
+  }
+  body .page-main .contacts-map .bg-triangle-white-footer {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+  }
+  body .page-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 940px;
+    padding: 35px 30px;
+  }
+  body .page-footer .page-footer-logo .footer-logo .logo-pink-blue-desktop {
+    display: none;
+  }
+  body .page-footer .social-links {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  body .page-footer .social-links .social-link {
+    margin: 0 6px;
+    list-style: none;
+  }
+  body .page-footer .social-links .social-link a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 47px;
+    height: 47px;
+    border: 2px solid #e9ebec;
+    border-radius: 50%;
+    position: relative;
+  }
+  body .page-footer .social-links .social-link a svg {
+    fill: #d22856;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  body .page-footer .social-links .social-link a:hover {
+    border-color: #283645;
+  }
+  body .page-footer .social-links .social-link a:active {
+    border-color: #e9ebec;
+  }
+  body .page-footer .social-links .social-link a:active svg {
+    fill: #e9ebec;
+  }
+  body .page-footer .page-footer-developer .htmlacademy-logo {
+    text-decoration: none;
+  }
+  body .page-footer .page-footer-developer .htmlacademy-logo span {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #283645;
+  }
+  body .page-footer .page-footer-developer .htmlacademy-logo .htmlacademy {
+    fill: #d22856;
+  }
+  body .page-footer .page-footer-developer .htmlacademy-logo .htmlacademy use {
+    fill: #000;
   }
 }
 /***********************
@@ -859,6 +950,9 @@ body .page-main .contacts-map iframe {
     /********************
     **** Main 1200px ****
     *********************/
+    /********************
+    **** Footer 1200px ***
+    *********************/
   }
   body .page-header .main-nav {
     display: flex;
@@ -869,6 +963,15 @@ body .page-main .contacts-map iframe {
     width: auto;
     margin: 0;
     padding: 0;
+  }
+  body .page-header .main-nav .header-logo-menu .main-logo .logo-pink-white-tablet {
+    display: none;
+  }
+  body .page-header .main-nav .header-logo-menu .main-logo .logo-pink-white-desktop {
+    display: block;
+  }
+  body .page-header .main-nav .header-logo-menu .main-logo .logo-pink-white-desktop:hover {
+    fill: #000;
   }
   body .page-header .main-nav .header-logo-menu .menu-toggle {
     display: none;
@@ -1094,4 +1197,57 @@ body .page-main .contacts-map iframe {
     max-width: 1200px;
     height: 500px;
   }
+  body .page-footer {
+    margin: 0 auto;
+    max-width: auto;
+    padding: 65px 130px 85px;
+  }
+  body .page-footer .page-footer-logo .footer-logo .logo-pink-blue-mobile {
+    display: none;
+  }
+  body .page-footer .page-footer-logo .footer-logo .logo-pink-blue-desktop {
+    display: block;
+  }
+}
+/****************************************
+*************  Photo-HTML  **************
+*****************************************/
+.photo-html {
+  /*******************
+  *** Photo-Header ***
+  ********************/
+  /*******************
+  ***** Photo-Main ****
+  ********************/
+}
+.photo-html .page-header .page-header-container {
+  margin-bottom: 0;
+  width: auto;
+  box-sizing: border-box;
+  padding-top: 100px;
+  height: 237px;
+  background-image: url(../img/bg-back-mobile@1x.jpg);
+  background-position: 50% top;
+  text-align: center;
+}
+.photo-html .page-header .page-header-container .header-photo-title {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: #fff;
+  line-height: 34px;
+  letter-spacing: 0.7px;
+}
+.photo-html .page-main {
+  padding-top: 45px;
+}
+.photo-html .page-main .page-main-title {
+  text-align: center;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: #283645;
 }

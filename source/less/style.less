@@ -47,11 +47,14 @@ body {
         padding: 0 20px;
         position: relative;
         .main-logo {
-          .logo-image {
-            img {
-              margin-top: 22px;
-              margin-bottom: 24px;
-            }
+          display: inline-block;
+          margin-top: 22px;
+          margin-bottom: 24px;
+          .logo-pink-white-tablet {
+            display: none;
+          }
+          .logo-pink-white-desktop {
+            display: none;
           }
         }
         .menu-toggle {
@@ -643,6 +646,12 @@ body {
       }
     }
   }
+  /*******************
+  ****** Footer ******
+  ********************/
+  .page-footer {
+    display: none;
+  }
 }
 
 /***********************
@@ -659,11 +668,13 @@ body {
           width: auto;
           max-width: 960px;
           .main-logo {
-            .logo-image {
-              img {
-                margin-top: 27px;
-                margin-bottom: 42px;
-              }
+            margin-top: 27px;
+            margin-bottom: 42px;
+            .logo-pink-white-mobile {
+              display: none;
+            }
+            .logo-pink-white-tablet {
+              display: block;
             }
           }
           .menu-toggle {
@@ -902,6 +913,84 @@ body {
       }
       .contacts-map {
         height: 380px;
+        position: relative;
+        .bg-triangle-white-footer {
+          display: block;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: auto;
+          z-index: 1000;
+        }
+      }
+    }
+    /********************
+    **** Footer 660px****
+    ********************/
+    .page-footer {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 940px;
+      padding: 35px 30px;
+      .page-footer-logo {
+        .footer-logo {
+          .logo-pink-blue-desktop {
+            display: none;
+          }
+        }
+      }
+      .social-links {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        .social-link {
+          margin: 0 6px;
+          list-style: none;
+          a {
+            display: inline-block;
+            vertical-align: middle;
+            width: 47px;
+            height: 47px;
+            border: 2px solid #e9ebec;
+            border-radius: 50%;
+            position: relative;
+            svg {
+              fill: @main-rose;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+            &:hover {
+              border-color: @primary-dark;
+            }
+            &:active {
+              border-color: #e9ebec;
+              svg {
+                fill: #e9ebec;
+              }
+            }
+          }
+        }
+      }
+      .page-footer-developer {
+        .htmlacademy-logo {
+          text-decoration: none;
+          span {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: @primary-dark;
+          }
+          .htmlacademy {
+            fill: @main-rose;
+            use {
+              fill: #000;
+            }
+          }
+        }
       }
     }
   }
@@ -927,6 +1016,17 @@ body {
           width: auto;
           margin: 0;
           padding: 0;
+          .main-logo {
+            .logo-pink-white-tablet {
+              display: none;
+            }
+            .logo-pink-white-desktop {
+              display: block;
+              &:hover {
+                fill: #000;
+              }
+            }
+          }
           .menu-toggle {
             display: none;
           }
@@ -1187,7 +1287,70 @@ body {
         height: 500px;
       }
     }
+    /********************
+    **** Footer 1200px ***
+    *********************/
+    .page-footer {
+      margin: 0 auto;
+      max-width: auto;
+      padding: 65px 130px 85px;
+      .page-footer-logo {
+        .footer-logo {
+          .logo-pink-blue-mobile {
+            display: none;
+          }
+          .logo-pink-blue-desktop {
+            display: block;
+          }
+        }
+      }
+    }
   }
 }
-  
+
+
+/****************************************
+*************  Photo-HTML  **************
+*****************************************/
+.photo-html {
+  /*******************
+  *** Photo-Header ***
+  ********************/
+  .page-header {
+    .page-header-container {
+      margin-bottom: 0;
+      width: auto;
+      box-sizing: border-box;
+      padding-top: 100px;
+      height: 237px;
+      background-image: url(../img/bg-back-mobile@1x.jpg);
+      background-position: 50% top;
+      text-align: center;
+      .header-photo-title {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-size: 24px;
+        color: #fff;
+        line-height: 34px;
+        letter-spacing: 0.7px;
+      }
+    }
+  }
+   /*******************
+  ***** Photo-Main ****
+  ********************/
+  .page-main {
+    padding-top: 45px;
+    .page-main-title {
+      text-align: center;
+      margin: 0;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 30px;
+      color: @primary-dark;
+    }
+  }
+}  
 
