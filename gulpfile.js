@@ -11,7 +11,7 @@ var rename = require('gulp-rename');
 var imagemin = require('gulp-imagemin');
 var svgstore = require('gulp-svgstore');
 var posthtml = require('gulp-posthtml');
-var include = require("posthtml-include"); 
+var include = require('posthtml-include'); 
 
 function styles() {
   return gulp.src('source/less/*.less')

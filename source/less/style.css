@@ -238,6 +238,14 @@ body .page-header .page-header-container .page-header-intro .intro-wrapper .intr
   outline: none;
   margin-bottom: 40px;
 }
+body .page-header .page-header-container .page-header-intro .intro-wrapper .intro-button:hover {
+  color: #d22856;
+  background-color: #fff;
+}
+body .page-header .page-header-container .page-header-intro .intro-wrapper .intro-button:active {
+  color: #ccc;
+  background-color: #fff;
+}
 body .page-header .page-header-container .page-header-intro .intro-wrapper .intro-list {
   display: flex;
   flex-wrap: wrap;
@@ -1219,6 +1227,9 @@ body .page-footer {
   /*******************
   ***** Photo-Main ****
   ********************/
+  /*******************
+  *** Photo-Footer ***
+  ********************/
 }
 .photo-html .page-header .page-header-container {
   margin-bottom: 0;
@@ -1236,18 +1247,324 @@ body .page-footer {
   font-weight: 300;
   font-size: 24px;
   color: #fff;
-  line-height: 34px;
+  line-height: 30px;
   letter-spacing: 0.7px;
 }
 .photo-html .page-main {
   padding-top: 45px;
 }
-.photo-html .page-main .page-main-title {
-  text-align: center;
+.photo-html .page-main .photo-section {
+  margin: 0 auto;
+}
+.photo-html .page-main .photo-section .photo-section-title-wrapper {
+  padding-bottom: 45px;
+}
+.photo-html .page-main .photo-section .photo-section-title-wrapper .photo-section-title {
   margin: 0;
+  text-align: center;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
   color: #283645;
+}
+.photo-html .page-main .photo-section .user-photo-of-the-day {
+  width: 100%;
+  position: relative;
+}
+.photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-of-the-day-image img {
+  display: block;
+  margin: 0 auto;
+}
+.photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-panorama-flag {
+  padding: 5px 18px;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translateX(1px);
+  z-index: 100;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #d22856;
+}
+.photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-caption {
+  margin: 0 auto;
+  padding: 15px;
+  width: 280px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+.photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-caption .user-photo-title {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #283645;
+}
+.photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-caption .user-photo-title span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-caption .user-photo-content {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #283645;
+}
+.photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-caption .user-photo-likes {
+  margin: 0;
+  margin-top: 10px;
+  padding-left: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #d22856;
+  position: relative;
+}
+.photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-caption .user-photo-likes::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../img/icon-heart.svg);
+  display: block;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+.photo-html .page-main .photo-section .user-photo-load-section {
+  width: 280px;
+  margin: 0 auto;
+}
+.photo-html .page-main .photo-section .user-photo-load-section .user-photo-load {
+  margin-top: 20px;
+}
+.photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-image img {
+  display: block;
+}
+.photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-caption {
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-caption .user-photo-load-title {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #283645;
+}
+.photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-caption .user-photo-load-title span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #283645;
+  text-transform: uppercase;
+}
+.photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-caption .user-photo-load-content {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #283645;
+}
+.photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-caption .user-photo-load-likes {
+  margin: 0;
+  margin-top: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-left: 25px;
+  color: #d22856;
+  position: relative;
+}
+.photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-caption .user-photo-load-likes::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../img/icon-heart.svg);
+  display: block;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+/***********************
+****** Photo-660px *****
+***********************/
+@media (min-width: 660px) {
+  .photo-html {
+    /**********************
+  *** Photo-Header 660px **
+  ************************/
+    /**********************
+  *** Photo-Main 660px **
+  **********************/
+  }
+  .photo-html .page-header .page-header-container {
+    padding-top: 180px;
+    height: 440px;
+    background-image: url(../img/bg-back-tablet@1x.jpg);
+    background-position: 50% top;
+  }
+  .photo-html .page-header .page-header-container .header-photo-title {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .photo-html .page-main {
+    padding-top: 80px;
+  }
+  .photo-html .page-main .photo-section .photo-section-title-wrapper {
+    margin: 0 auto;
+    padding-bottom: 80px;
+    width: 450px;
+  }
+  .photo-html .page-main .photo-section .photo-section-title-wrapper .photo-section-title {
+    font-size: 18px;
+  }
+  .photo-html .page-main .photo-section .photo-section-title-wrapper .photo-section-title br {
+    display: none;
+  }
+  .photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-of-the-day-image img {
+    width: 660px;
+  }
+  .photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-panorama-flag {
+    top: 55px;
+    transform: translateX(180px);
+  }
+  .photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-caption {
+    margin: 0 auto;
+    padding: 20px;
+    width: 620px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-caption .user-photo-title {
+    order: -2;
+  }
+  .photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-caption .user-photo-likes {
+    padding-left: 0;
+    margin-right: 40px;
+    margin-top: 7px;
+    margin-left: auto;
+    order: -1;
+  }
+  .photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-caption .user-photo-likes::after {
+    left: 110px;
+  }
+  .photo-html .page-main .photo-section .user-photo-load-section {
+    width: 640px;
+    padding: 15px;
+    margin: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  .photo-html .page-main .photo-section .user-photo-load-section .user-photo-load {
+    margin-top: 20px;
+  }
+  .photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-image img {
+    display: block;
+  }
+  .photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-caption {
+    width: 300px;
+    min-height: 150px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-caption .user-photo-load-title {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #283645;
+  }
+  .photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-caption .user-photo-load-title span {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #283645;
+    text-transform: uppercase;
+  }
+  .photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-caption .user-photo-load-content {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #283645;
+  }
+  .photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-caption .user-photo-load-likes {
+    margin: 0;
+    margin-top: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-left: 25px;
+    color: #d22856;
+    position: relative;
+  }
+  .photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-caption .user-photo-load-likes::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../img/icon-heart.svg);
+    display: block;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+  }
+}
+/***********************
+****** Photo-1200px *****
+***********************/
+@media (min-width: 1200px) {
+  .photo-html {
+    /************************
+  *** Photo-Header 1200px **
+  ************************/
+    /**********************
+    ** Photo-Main 1200px **
+    **********************/
+  }
+  .photo-html .page-header .page-header-container {
+    height: 394px;
+    background-image: url(../img/bg-back-desktop@1x.jpg);
+    background-position: 50% top;
+  }
+  .photo-html .page-main .photo-section .photo-section-title-wrapper {
+    width: 600px;
+  }
+  .photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-panorama-flag {
+    transform: translateX(330px);
+  }
+  .photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-caption {
+    margin: 0 auto;
+    width: 940px;
+  }
+  .photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-caption .user-photo-content {
+    margin-top: 10px;
+  }
 }

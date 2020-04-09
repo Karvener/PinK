@@ -220,6 +220,14 @@ body {
             cursor: pointer;
             outline: none;
             margin-bottom: 40px;
+            &:hover {
+              color: @main-rose;
+              background-color: #fff;
+            }
+            &:active {
+              color: #ccc;
+              background-color: #fff;
+            }
           }
           .intro-list {
             display: flex;
@@ -1332,7 +1340,7 @@ body {
         font-weight: 300;
         font-size: 24px;
         color: #fff;
-        line-height: 34px;
+        line-height: 30px;
         letter-spacing: 0.7px;
       }
     }
@@ -1342,15 +1350,360 @@ body {
   ********************/
   .page-main {
     padding-top: 45px;
-    .page-main-title {
-      text-align: center;
-      margin: 0;
-      font-family: "Open Sans", sans-serif;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 30px;
-      color: @primary-dark;
+    .photo-section {
+      margin: 0 auto;
+      .photo-section-title-wrapper {
+        padding-bottom: 45px;
+        .photo-section-title {
+          margin: 0;
+          text-align: center;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 30px;
+          color: @primary-dark;
+        }
+      }
+      .user-photo-of-the-day {
+        width: 100%;
+        position: relative;
+        .user-photo-of-the-day-image {
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+        .user-photo-panorama-flag {
+          padding: 5px 18px;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 50%;
+          transform: translateX(1px);
+          z-index: 100;
+          font-family: "Open Sans", sans-serif;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 24px;
+          text-transform: uppercase;
+          color: #fff;
+          background-color: @main-rose;
+        }
+        .user-photo-caption {
+          margin: 0 auto;
+          padding: 15px;
+          width: 280px;
+          box-sizing: border-box;
+          background-color: #f2f2f2;
+          .user-photo-title {
+            margin: 0;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            color: @primary-dark;
+            span {
+              font-size: 12px;
+              font-weight: 300;
+              text-transform: uppercase;
+            }
+          }
+          .user-photo-content {
+            margin: 0;
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            color: @primary-dark;
+          }
+          .user-photo-likes {
+            margin: 0;
+            margin-top: 10px;
+            padding-left: 30px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: @main-rose;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              background-image: url(../img/icon-heart.svg);
+              display: block;
+              width: 14px;
+              height: 14px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .user-photo-load-section {
+        width: 280px;
+        margin: 0 auto;
+        .user-photo-load  {
+          margin-top: 20px;
+          .user-photo-load-image {
+            img {
+              display: block;
+            }
+          }
+          .user-photo-load-caption  {
+            background-color: #f2f2f2;
+            padding: 20px;
+            box-sizing: border-box;
+            .user-photo-load-title {
+              margin: 0;
+              font-family: "Open Sans", sans-serif;
+              font-size: 14px;
+              line-height: 24px;
+              font-weight: 700;
+              color: @primary-dark;
+              span {
+                font-family: "Open Sans", sans-serif;
+                font-size: 12px;
+                font-weight: 300;
+                color: @primary-dark;
+                text-transform: uppercase;
+              }
+            }
+            .user-photo-load-content {
+              margin: 0;
+              font-family: "Open Sans", sans-serif;
+              font-size: 14px;
+              line-height: 24px;
+              font-weight: 400;
+              color: @primary-dark;
+            }
+            .user-photo-load-likes {
+              margin: 0;
+              margin-top: 15px;
+              font-family: "Open Sans", sans-serif;
+              font-size: 12px;
+              font-weight: 400;
+              text-transform: uppercase;
+              padding-left: 25px;
+              color: @main-rose;
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: url(../img/icon-heart.svg);
+                display: block;
+                width: 14px;
+                height: 14px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
     }
   }
+  /*******************
+  *** Photo-Footer ***
+  ********************/
+  .page-footer {
+
+  }
 }  
+
+/***********************
+****** Photo-660px *****
+***********************/
+@media (min-width: 660px) {
+  .photo-html {
+    /**********************
+  *** Photo-Header 660px **
+  ************************/
+    .page-header {
+      .page-header-container {
+        padding-top: 180px;
+        height: 440px;
+        background-image: url(../img/bg-back-tablet@1x.jpg);
+        background-position: 50% top;
+        .header-photo-title {
+          font-size: 50px;
+          line-height: 60px;
+        }
+      }
+    }
+  /**********************
+  *** Photo-Main 660px **
+  **********************/
+    .page-main {
+      padding-top: 80px;
+      .photo-section {
+        .photo-section-title-wrapper {
+          margin: 0 auto;
+          padding-bottom: 80px;
+          width: 450px;
+          .photo-section-title {
+            font-size: 18px;
+            br {
+              display: none;
+            }
+          }
+        }
+        .user-photo-of-the-day {
+          .user-photo-of-the-day-image {
+            img {
+              width: 660px;
+            }
+          }
+          .user-photo-panorama-flag {
+            top: 55px;
+            transform: translateX(180px);
+          }
+          .user-photo-caption {
+            margin: 0 auto;
+            padding: 20px;
+            width: 620px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .user-photo-title {
+              order: -2;
+            }
+            .user-photo-content {
+              
+            }
+            .user-photo-likes {
+              padding-left: 0;
+              margin-right: 40px;
+              margin-top: 7px;
+              margin-left: auto;
+              order: -1;
+              &::after {
+                left: 110px;
+              }
+            }
+          }
+        }
+        .user-photo-load-section {
+          width: 640px;
+          padding: 15px;
+          margin: 0;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          box-sizing: border-box;
+          .user-photo-load  {
+            margin-top: 20px;
+            .user-photo-load-image {
+              img {
+                display: block;
+              }
+            }
+            .user-photo-load-caption  {
+              width: 300px;
+              min-height: 150px;
+              background-color: #f2f2f2;
+              padding: 20px;
+              box-sizing: border-box;
+              .user-photo-load-title {
+                margin: 0;
+                font-family: "Open Sans", sans-serif;
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 700;
+                color: @primary-dark;
+                span {
+                  font-family: "Open Sans", sans-serif;
+                  font-size: 12px;
+                  font-weight: 300;
+                  color: @primary-dark;
+                  text-transform: uppercase;
+                }
+              }
+              .user-photo-load-content {
+                margin: 0;
+                font-family: "Open Sans", sans-serif;
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 400;
+                color: @primary-dark;
+              }
+              .user-photo-load-likes {
+                margin: 0;
+                margin-top: 15px;
+                font-family: "Open Sans", sans-serif;
+                font-size: 12px;
+                font-weight: 400;
+                text-transform: uppercase;
+                padding-left: 25px;
+                color: @main-rose;
+                position: relative;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  background-image: url(../img/icon-heart.svg);
+                  display: block;
+                  width: 14px;
+                  height: 14px;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/***********************
+****** Photo-1200px *****
+***********************/
+@media (min-width: 1200px) {
+  .photo-html {
+  /************************
+  *** Photo-Header 1200px **
+  ************************/
+    .page-header {
+      .page-header-container {
+        height: 394px;
+        background-image: url(../img/bg-back-desktop@1x.jpg);
+        background-position: 50% top;
+      }
+    }
+    /**********************
+    ** Photo-Main 1200px **
+    **********************/
+    .page-main {
+      .photo-section {
+        .photo-section-title-wrapper {
+          width: 600px;
+          .photo-section-title {
+            
+          }
+        }
+        .user-photo-of-the-day {
+          .user-photo-of-the-day-image {
+            
+          }
+          .user-photo-panorama-flag {
+            transform: translateX(330px);
+          }
+          .user-photo-caption {
+            margin: 0 auto;
+            width: 940px;
+            .user-photo-content {
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
