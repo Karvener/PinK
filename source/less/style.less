@@ -25,6 +25,21 @@ img {
   list-style: none;
 }
 
+.btn {
+  width: 280px;
+  padding: 16px 0;
+  border: 2px solid @main-rose;
+  border-radius: 30px;
+  background-color: transparent;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: @main-rose;
+  cursor: pointer;
+  outline: none;
+}
+
 /****************************************
 *************  Index-HTML  **************
 *****************************************/
@@ -206,19 +221,8 @@ body {
             letter-spacing: 0.7px;
           }
           .intro-button {
-            width: 280px;
-            padding: 16px 0;
-            border: none;
-            border: 2px solid #fff;
-            border-radius: 30px;
-            background-color: transparent;
-            font-family: "Open Sans", sans-serif;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 18px;
+            border-color:#fff;
             color: #fff;
-            cursor: pointer;
-            outline: none;
             margin-bottom: 40px;
             &:hover {
               color: @main-rose;
@@ -659,6 +663,72 @@ body {
   ********************/
   .page-footer {
     display: none;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 940px;
+    padding: 35px 30px;
+    .page-footer-logo {
+      .footer-logo {
+        .logo-pink-blue-desktop {
+          display: none;
+        }
+      }
+    }
+    .social-links {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      .social-link {
+        margin: 0 6px;
+        list-style: none;
+        a {
+          display: inline-block;
+          vertical-align: middle;
+          width: 47px;
+          height: 47px;
+          border: 2px solid #e9ebec;
+          border-radius: 50%;
+          position: relative;
+          svg {
+            fill: @main-rose;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          &:hover {
+            border-color: @primary-dark;
+          }
+          &:active {
+            border-color: #e9ebec;
+            svg {
+              fill: #e9ebec;
+            }
+          }
+        }
+      }
+    }
+    .page-footer-developer {
+      .htmlacademy-logo {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        span {
+          margin-right: 10px;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 18px;
+          color: @primary-dark;
+        }
+        .htmlacademy {
+          fill: @main-rose;
+          use {
+            fill: #000;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -937,69 +1007,6 @@ body {
     ********************/
     .page-footer {
       display: flex;
-      justify-content: space-between;
-      margin: 0 auto;
-      max-width: 940px;
-      padding: 35px 30px;
-      .page-footer-logo {
-        .footer-logo {
-          .logo-pink-blue-desktop {
-            display: none;
-          }
-        }
-      }
-      .social-links {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        .social-link {
-          margin: 0 6px;
-          list-style: none;
-          a {
-            display: inline-block;
-            vertical-align: middle;
-            width: 47px;
-            height: 47px;
-            border: 2px solid #e9ebec;
-            border-radius: 50%;
-            position: relative;
-            svg {
-              fill: @main-rose;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-            }
-            &:hover {
-              border-color: @primary-dark;
-            }
-            &:active {
-              border-color: #e9ebec;
-              svg {
-                fill: #e9ebec;
-              }
-            }
-          }
-        }
-      }
-      .page-footer-developer {
-        .htmlacademy-logo {
-          text-decoration: none;
-          span {
-            font-family: "Open Sans", sans-serif;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 18px;
-            color: @primary-dark;
-          }
-          .htmlacademy {
-            fill: @main-rose;
-            use {
-              fill: #000;
-            }
-          }
-        }
-      }
     }
   }
 }
@@ -1504,12 +1511,69 @@ body {
         }
       }
     }
+    .photo-load {
+      width: 320px;
+      margin: 0 auto;
+      .photo-load-title {
+        padding: 40px 20px;
+        .title-text {
+          margin: 0;
+          font-family: "Open Sans", sans-serif;
+          font-size: 14px;
+          line-height: 30px;
+          font-weight: 400;
+          color: @primary-dark;
+          text-align: center;
+        }
+      }
+      .photo-load-form {
+        padding-top: 20px;
+        background-color: #f2f2f2;
+        .photo-load-img {
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+        .photo-load-tools-list {
+
+        }
+        .photo-load-buttons {
+          .btn {
+
+            &:hover {
+              color: #fff;
+              background-color: @main-rose;
+            }
+            &:active {
+              color: #ccc;
+              background-color: @main-rose;
+            }
+          }
+          .button-post {
+            
+          }
+          .button-cansel {
+
+          }
+        }
+      }
+    }
   }
   /*******************
   *** Photo-Footer ***
   ********************/
   .page-footer {
-
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .social-links {
+      margin-top: 35px;
+    }
+    .page-footer-developer {
+      margin-top: 35px;
+    }
   }
 }  
 
@@ -1518,7 +1582,7 @@ body {
 ***********************/
 @media (min-width: 660px) {
   .photo-html {
-    /**********************
+  /************************
   *** Photo-Header 660px **
   ************************/
     .page-header {
@@ -1589,14 +1653,13 @@ body {
         .user-photo-load-section {
           width: 640px;
           padding: 15px;
-          margin: 0;
           margin: 0 auto;
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
           box-sizing: border-box;
           .user-photo-load  {
-            margin-top: 20px;
+            margin-top: 10px;
             .user-photo-load-image {
               img {
                 display: block;
@@ -1608,6 +1671,8 @@ body {
               background-color: #f2f2f2;
               padding: 20px;
               box-sizing: border-box;
+              display: flex;
+              flex-direction: column;
               .user-photo-load-title {
                 margin: 0;
                 font-family: "Open Sans", sans-serif;
@@ -1633,19 +1698,19 @@ body {
               }
               .user-photo-load-likes {
                 margin: 0;
-                margin-top: 15px;
+                margin-top: auto;
                 font-family: "Open Sans", sans-serif;
                 font-size: 12px;
                 font-weight: 400;
                 text-transform: uppercase;
-                padding-left: 25px;
+                padding-left: 0;
                 color: @main-rose;
                 position: relative;
                 &::after {
                   content: "";
                   position: absolute;
                   top: 0;
-                  left: 0;
+                  left: 245px;
                   background-image: url(../img/icon-heart.svg);
                   display: block;
                   width: 14px;
@@ -1656,6 +1721,29 @@ body {
             }
           }
         }
+      }
+      .photo-load {
+        width: 640px;
+        .photo-load-title {
+          box-sizing: border-box;
+          padding: 55px 20px;
+          .title-text {
+            font-size: 18px;
+          }
+        }
+      } 
+    }
+  /**********************
+  ** Photo-Footer 660px**
+  **********************/
+    .page-footer {
+      padding: 35px 30px;
+      flex-direction: row;
+      .social-links {
+        margin: 0;
+      }
+      .page-footer-developer {
+        margin: 0;
       }
     }
   }
@@ -1683,13 +1771,12 @@ body {
       .photo-section {
         .photo-section-title-wrapper {
           width: 600px;
-          .photo-section-title {
-            
-          }
         }
         .user-photo-of-the-day {
           .user-photo-of-the-day-image {
-            
+            img {
+              width: 1200px;
+            }
           }
           .user-photo-panorama-flag {
             transform: translateX(330px);
@@ -1702,6 +1789,14 @@ body {
             }
           }
         }
+        .user-photo-load-section {
+          margin-top: 50px;
+          width: 940px;
+          padding: 0;
+        }
+      }
+      .photo-load {
+        width: 1184px;
       }
     }
   }

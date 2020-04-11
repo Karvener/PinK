@@ -35,6 +35,20 @@ img {
   padding: 0;
   outline: none;
 }
+.btn {
+  width: 280px;
+  padding: 16px 0;
+  border: 2px solid #d22856;
+  border-radius: 30px;
+  background-color: transparent;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: #d22856;
+  cursor: pointer;
+  outline: none;
+}
 /****************************************
 *************  Index-HTML  **************
 *****************************************/
@@ -223,19 +237,8 @@ body .page-header .page-header-container .page-header-intro .intro-wrapper .intr
   letter-spacing: 0.7px;
 }
 body .page-header .page-header-container .page-header-intro .intro-wrapper .intro-button {
-  width: 280px;
-  padding: 16px 0;
-  border: none;
-  border: 2px solid #fff;
-  border-radius: 30px;
-  background-color: transparent;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
+  border-color: #fff;
   color: #fff;
-  cursor: pointer;
-  outline: none;
   margin-bottom: 40px;
 }
 body .page-header .page-header-container .page-header-intro .intro-wrapper .intro-button:hover {
@@ -644,6 +647,66 @@ body .page-main .contacts-map iframe {
 }
 body .page-footer {
   display: none;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 940px;
+  padding: 35px 30px;
+}
+body .page-footer .page-footer-logo .footer-logo .logo-pink-blue-desktop {
+  display: none;
+}
+body .page-footer .social-links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+body .page-footer .social-links .social-link {
+  margin: 0 6px;
+  list-style: none;
+}
+body .page-footer .social-links .social-link a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 47px;
+  height: 47px;
+  border: 2px solid #e9ebec;
+  border-radius: 50%;
+  position: relative;
+}
+body .page-footer .social-links .social-link a svg {
+  fill: #d22856;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .page-footer .social-links .social-link a:hover {
+  border-color: #283645;
+}
+body .page-footer .social-links .social-link a:active {
+  border-color: #e9ebec;
+}
+body .page-footer .social-links .social-link a:active svg {
+  fill: #e9ebec;
+}
+body .page-footer .page-footer-developer .htmlacademy-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+body .page-footer .page-footer-developer .htmlacademy-logo span {
+  margin-right: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #283645;
+}
+body .page-footer .page-footer-developer .htmlacademy-logo .htmlacademy {
+  fill: #d22856;
+}
+body .page-footer .page-footer-developer .htmlacademy-logo .htmlacademy use {
+  fill: #000;
 }
 /***********************
 ********* 660px ********
@@ -885,63 +948,6 @@ body .page-footer {
   }
   body .page-footer {
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 940px;
-    padding: 35px 30px;
-  }
-  body .page-footer .page-footer-logo .footer-logo .logo-pink-blue-desktop {
-    display: none;
-  }
-  body .page-footer .social-links {
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  body .page-footer .social-links .social-link {
-    margin: 0 6px;
-    list-style: none;
-  }
-  body .page-footer .social-links .social-link a {
-    display: inline-block;
-    vertical-align: middle;
-    width: 47px;
-    height: 47px;
-    border: 2px solid #e9ebec;
-    border-radius: 50%;
-    position: relative;
-  }
-  body .page-footer .social-links .social-link a svg {
-    fill: #d22856;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  body .page-footer .social-links .social-link a:hover {
-    border-color: #283645;
-  }
-  body .page-footer .social-links .social-link a:active {
-    border-color: #e9ebec;
-  }
-  body .page-footer .social-links .social-link a:active svg {
-    fill: #e9ebec;
-  }
-  body .page-footer .page-footer-developer .htmlacademy-logo {
-    text-decoration: none;
-  }
-  body .page-footer .page-footer-developer .htmlacademy-logo span {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    color: #283645;
-  }
-  body .page-footer .page-footer-developer .htmlacademy-logo .htmlacademy {
-    fill: #d22856;
-  }
-  body .page-footer .page-footer-developer .htmlacademy-logo .htmlacademy use {
-    fill: #000;
   }
 }
 /***********************
@@ -1403,16 +1409,63 @@ body .page-footer {
   height: 14px;
   cursor: pointer;
 }
+.photo-html .page-main .photo-load {
+  width: 320px;
+  margin: 0 auto;
+}
+.photo-html .page-main .photo-load .photo-load-title {
+  padding: 40px 20px;
+}
+.photo-html .page-main .photo-load .photo-load-title .title-text {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #283645;
+  text-align: center;
+}
+.photo-html .page-main .photo-load .photo-load-form {
+  padding-top: 20px;
+  background-color: #f2f2f2;
+}
+.photo-html .page-main .photo-load .photo-load-form .photo-load-img img {
+  display: block;
+  margin: 0 auto;
+}
+.photo-html .page-main .photo-load .photo-load-form .photo-load-buttons .btn:hover {
+  color: #fff;
+  background-color: #d22856;
+}
+.photo-html .page-main .photo-load .photo-load-form .photo-load-buttons .btn:active {
+  color: #ccc;
+  background-color: #d22856;
+}
+.photo-html .page-footer {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.photo-html .page-footer .social-links {
+  margin-top: 35px;
+}
+.photo-html .page-footer .page-footer-developer {
+  margin-top: 35px;
+}
 /***********************
 ****** Photo-660px *****
 ***********************/
 @media (min-width: 660px) {
   .photo-html {
-    /**********************
+    /************************
   *** Photo-Header 660px **
   ************************/
     /**********************
   *** Photo-Main 660px **
+  **********************/
+    /**********************
+  ** Photo-Footer 660px**
   **********************/
   }
   .photo-html .page-header .page-header-container {
@@ -1471,7 +1524,6 @@ body .page-footer {
   .photo-html .page-main .photo-section .user-photo-load-section {
     width: 640px;
     padding: 15px;
-    margin: 0;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -1479,7 +1531,7 @@ body .page-footer {
     box-sizing: border-box;
   }
   .photo-html .page-main .photo-section .user-photo-load-section .user-photo-load {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-image img {
     display: block;
@@ -1490,6 +1542,8 @@ body .page-footer {
     background-color: #f2f2f2;
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
   }
   .photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-caption .user-photo-load-title {
     margin: 0;
@@ -1516,12 +1570,12 @@ body .page-footer {
   }
   .photo-html .page-main .photo-section .user-photo-load-section .user-photo-load .user-photo-load-caption .user-photo-load-likes {
     margin: 0;
-    margin-top: 15px;
+    margin-top: auto;
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;
-    padding-left: 25px;
+    padding-left: 0;
     color: #d22856;
     position: relative;
   }
@@ -1529,12 +1583,32 @@ body .page-footer {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: 245px;
     background-image: url(../img/icon-heart.svg);
     display: block;
     width: 14px;
     height: 14px;
     cursor: pointer;
+  }
+  .photo-html .page-main .photo-load {
+    width: 640px;
+  }
+  .photo-html .page-main .photo-load .photo-load-title {
+    box-sizing: border-box;
+    padding: 55px 20px;
+  }
+  .photo-html .page-main .photo-load .photo-load-title .title-text {
+    font-size: 18px;
+  }
+  .photo-html .page-footer {
+    padding: 35px 30px;
+    flex-direction: row;
+  }
+  .photo-html .page-footer .social-links {
+    margin: 0;
+  }
+  .photo-html .page-footer .page-footer-developer {
+    margin: 0;
   }
 }
 /***********************
@@ -1557,6 +1631,9 @@ body .page-footer {
   .photo-html .page-main .photo-section .photo-section-title-wrapper {
     width: 600px;
   }
+  .photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-of-the-day-image img {
+    width: 1200px;
+  }
   .photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-panorama-flag {
     transform: translateX(330px);
   }
@@ -1566,5 +1643,13 @@ body .page-footer {
   }
   .photo-html .page-main .photo-section .user-photo-of-the-day .user-photo-caption .user-photo-content {
     margin-top: 10px;
+  }
+  .photo-html .page-main .photo-section .user-photo-load-section {
+    margin-top: 50px;
+    width: 940px;
+    padding: 0;
+  }
+  .photo-html .page-main .photo-load {
+    width: 1184px;
   }
 }
